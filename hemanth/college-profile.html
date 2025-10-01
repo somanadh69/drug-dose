@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Profile – Hackathon Hub</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/collegeProfile.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="auth-bg">
+  <div class="college-dashboard">
+    <!-- Top Navbar -->
+    <nav class="college-navbar">
+      <div class="college-logo">
+        <img src="assets/bits.png" alt="College Logo">
+        <span id="collegeName">BITS Pilani</span>
+      </div>
+      <div class="college-nav-actions">
+        <span class="notif-icon">🔔</span>
+        <img src="assets/profile-default.svg" class="profile-icon" alt="Profile">
+      </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <aside class="college-sidebar">
+      <ul>
+        <li class="active"><span>🏠</span> Dashboard</li>
+        <li><span>🎤</span> Hosted Hackathons</li>
+        <li><span>📅</span> Upcoming Events</li>
+        <li><span>👨‍🎓</span> Registered Students</li>
+        <li><span>⚙️</span> Settings</li>
+        <li onclick="window.location.href='auth.html'"><span>🚪</span> Logout</li>
+      </ul>
+    </aside>
+
+    <!-- Main Dashboard -->
+    <main class="college-main">
+      <!-- Statistics Card -->
+      <section class="college-stats-grid">
+        <div class="college-stat-card">
+          <div class="stat-label">Hackathons Hosted</div>
+          <div class="stat-value" id="hostedCount">8</div>
+        </div>
+        <div class="college-stat-card">
+          <div class="stat-label">Events Managed</div>
+          <div class="stat-value" id="eventsManaged">15</div>
+        </div>
+        <div class="college-stat-card">
+          <div class="stat-label">Student Participation</div>
+          <div class="stat-value" id="studentParticipation">320</div>
+        </div>
+      </section>
+
+      <!-- Ranking/Rating Card -->
+      <section class="college-ranking-card">
+        <div class="ranking-info">
+          <div class="ranking-label">Global Rank</div>
+          <div class="ranking-value" id="collegeRank">#7</div>
+        </div>
+        <div class="ranking-graph">
+          <canvas id="collegeRankGraph" width="120" height="40"></canvas>
+        </div>
+      </section>
+
+      <!-- Badges Section -->
+      <section class="college-badges">
+        <h3>Achievements</h3>
+        <div class="badges-grid" id="collegeBadgesGrid"></div>
+      </section>
+
+      <!-- Events Overview -->
+      <section class="college-events-overview">
+        <h3>Upcoming Events</h3>
+        <div class="events-banner" id="eventsBanner"></div>
+        <div class="events-list" id="eventsList"></div>
+      </section>
+    </main>
+  </div>
+  <script src="js/collegeProfile.js"></script>
+</body>
+</html>

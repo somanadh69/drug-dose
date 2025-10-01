@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HackHub – College Hackathon Aggregator</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">HackHub</div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="hackathons.html">Hackathons</a></li>
+      <li><a href="host.html">Host</a></li>
+      <li><a href="#footer">Contact</a></li>
+      <li><a href="auth.html" class="cta-btn" style="padding:0.5rem 1.5rem;font-size:1rem;">Login / Sign Up</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <canvas id="bg-particles"></canvas>
+    <div class="hero-content">
+      <h1>All College Hackathons. One Platform.</h1>
+      <p>Discover, Compete, and Win — from anywhere in India.</p>
+      <a href="hackathons.html" class="cta-btn">Explore Hackathons</a>
+    </div>
+  </section>
+
+  <!-- Interactive Scroll Section -->
+  <section class="scroll-section">
+    <div class="scroll-block" id="discover">
+      <div class="scroll-img"><img src="assets/discover.svg" alt="Discover Hackathons"></div>
+      <div class="scroll-text">
+        <h2>Discover Hackathons</h2>
+        <p>Find the best college hackathons across India, all in one place. Filter, search, and never miss an event.</p>
+      </div>
+    </div>
+    <div class="scroll-block reverse" id="register">
+      <div class="scroll-img"><img src="assets/register.svg" alt="Register Easily"></div>
+      <div class="scroll-text">
+        <h2>Register Easily</h2>
+        <p>Sign up in seconds with our glowing, animated forms. Your next win is just a click away.</p>
+      </div>
+    </div>
+    <div class="scroll-block" id="host">
+      <div class="scroll-img"><img src="assets/host.svg" alt="Host Events"></div>
+      <div class="scroll-text">
+        <h2>Host Events</h2>
+        <p>Colleges and universities can showcase their hackathons and attract top talent with stunning event pages.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="footer-divider"></div>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Privacy</a>
+      </div>
+      <div class="footer-social">
+        <a href="#" class="social-icon"><img src="assets/icon-twitter.svg" alt="Twitter"></a>
+        <a href="#" class="social-icon"><img src="assets/icon-linkedin.svg" alt="LinkedIn"></a>
+        <a href="#" class="social-icon"><img src="assets/icon-instagram.svg" alt="Instagram"></a>
+      </div>
+      <div class="footer-copy">© 2025 HackHub. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/scrollEffects.js"></script>
+</body>
+</html>

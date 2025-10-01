@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HackHub – Hackathons</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">HackHub</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#" class="active">Hackathons</a></li>
+      <li><a href="host.html">Host</a></li>
+      <li><a href="#footer">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Sticky Filter/Search Bar -->
+  <div class="hackathon-filter-bar">
+    <input type="text" id="searchInput" placeholder="Search hackathons, colleges...">
+    <button id="filterBtn"><span>🔍</span></button>
+  </div>
+
+  <!-- Hackathon Listings Grid -->
+  <main class="hackathon-listings" id="hackathonGrid">
+    <!-- Cards injected by JS -->
+  </main>
+
+  <!-- Registration Modal -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="registerModal">
+      <button class="modal-close" id="closeModal">×</button>
+      <h2>Register for Hackathon</h2>
+      <form id="registerForm">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="text" name="college" placeholder="College" required>
+        <button type="submit" class="cta-btn">Submit</button>
+      </form>
+      <div class="modal-success" id="modalSuccess">
+        <h3>Registration Successful!</h3>
+        <p>See you at the hackathon 🚀</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="footer-divider"></div>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Privacy</a>
+      </div>
+      <div class="footer-social">
+        <a href="#" class="social-icon"><img src="assets/icon-twitter.svg" alt="Twitter"></a>
+        <a href="#" class="social-icon"><img src="assets/icon-linkedin.svg" alt="LinkedIn"></a>
+        <a href="#" class="social-icon"><img src="assets/icon-instagram.svg" alt="Instagram"></a>
+      </div>
+      <div class="footer-copy">© 2025 HackHub. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="js/formHandler.js"></script>
+</body>
+</html>

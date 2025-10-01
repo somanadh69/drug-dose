@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Host a Hackathon – HackHub</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">HackHub</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="hackathons.html">Hackathons</a></li>
+      <li><a href="#" class="active">Host</a></li>
+      <li><a href="#footer">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Host Hackathon Form -->
+  <main class="host-main">
+    <div class="host-card">
+      <h2>Host Your Hackathon</h2>
+      <form id="hostForm">
+        <input type="text" name="name" placeholder="Hackathon Name" required>
+        <input type="text" name="college" placeholder="College/University" required>
+        <input type="text" name="date" placeholder="Date (e.g. Nov 10-12, 2025)" required>
+        <input type="url" name="logo" placeholder="Logo URL (PNG, 100x100)" required>
+        <textarea name="desc" placeholder="Short Description" required></textarea>
+        <button type="submit" class="cta-btn">Add Hackathon</button>
+      </form>
+      <div class="host-success" id="hostSuccess">
+        <h3>Hackathon Added!</h3>
+        <p>Your event is now live on HackHub.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="footer-divider"></div>
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Privacy</a>
+      </div>
+      <div class="footer-social">
+        <a href="#" class="social-icon"><img src="assets/icon-twitter.svg" alt="Twitter"></a>
+        <a href="#" class="social-icon"><img src="assets/icon-linkedin.svg" alt="LinkedIn"></a>
+        <a href="#" class="social-icon"><img src="assets/icon-instagram.svg" alt="Instagram"></a>
+      </div>
+      <div class="footer-copy">© 2025 HackHub. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="js/hostForm.js"></script>
+</body>
+</html>

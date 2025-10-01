@@ -1,0 +1,508 @@
+/* style.css – Main Styles for HackHub */
+:root {
+  --black: #000;
+  --charcoal: #111;
+  --red: #E50914;
+  --red2: #FF1E56;
+  --white: #fff;
+  --gray: #e5e5e5;
+  --neon-red: rgba(229,9,20,0.6);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--black);
+  color: var(--white);
+  font-family: 'Inter', 'Roboto', Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(120deg, var(--black) 80%, var(--red2) 120%);
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: rgba(10,10,10,0.92);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 3vw;
+  z-index: 100;
+  box-shadow: 0 2px 16px 0 var(--neon-red);
+  border-bottom: 2px solid rgba(229,9,20,0.18);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+.navbar.scrolled {
+  background: rgba(20,0,0,0.98);
+  box-shadow: 0 4px 32px 0 var(--neon-red);
+  border-bottom: 2px solid var(--red2);
+}
+.logo {
+  font-family: 'Montserrat', 'Bebas Neue', Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--red);
+  letter-spacing: 2px;
+  text-shadow: 0 0 12px var(--neon-red);
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+.nav-links a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  position: relative;
+  transition: color 0.2s;
+}
+.nav-links a:hover {
+  color: var(--red);
+}
+.nav-links a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--red), var(--red2));
+  transition: width 0.3s;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+}
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--black);
+  overflow: hidden;
+}
+#bg-particles {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  z-index: 1;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+.hero-content h1 {
+  font-family: 'Montserrat', 'Bebas Neue', Arial, sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--white);
+  margin-bottom: 1rem;
+  text-shadow: 0 0 24px var(--neon-red);
+}
+.hero-content p {
+  color: var(--gray);
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem;
+}
+.cta-btn {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--red), var(--red2));
+  color: var(--white);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 40px;
+  box-shadow: 0 0 24px var(--neon-red);
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.cta-btn:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 40px var(--red2), 0 0 8px var(--red);
+}
+
+.scroll-section {
+  background: linear-gradient(120deg, var(--charcoal) 80%, var(--red2) 120%);
+  padding: 6rem 0 2rem 0;
+}
+.scroll-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4vw;
+  margin: 4rem 0;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.8s, transform 0.8s;
+}
+.scroll-block.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.scroll-block.reverse {
+  flex-direction: row-reverse;
+}
+.scroll-img {
+  width: 320px;
+  height: 220px;
+  background: linear-gradient(135deg, var(--red) 60%, var(--red2) 100%);
+  border-radius: 24px;
+  box-shadow: 0 0 32px var(--neon-red);
+  margin: 0 2vw;
+  opacity: 0.7;
+}
+.scroll-text h2 {
+  font-family: 'Montserrat', 'Bebas Neue', Arial, sans-serif;
+  font-size: 2.2rem;
+  color: var(--white);
+  margin-bottom: 0.7rem;
+  text-shadow: 0 0 12px var(--neon-red);
+}
+.scroll-text p {
+  color: var(--gray);
+  font-size: 1.1rem;
+  max-width: 420px;
+}
+
+.footer-divider {
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(90deg, var(--red), transparent 80%);
+  margin-bottom: 1.5rem;
+}
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0 1rem 0;
+  background: var(--black);
+}
+.footer-links {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+.footer-links a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+.footer-links a:hover {
+  color: var(--red);
+}
+.footer-social {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+.social-icon img {
+  width: 28px;
+  height: 28px;
+  filter: grayscale(1) brightness(1.5) drop-shadow(0 0 8px var(--neon-red));
+  transition: filter 0.2s;
+}
+.social-icon:hover img {
+  filter: grayscale(0) brightness(2) drop-shadow(0 0 16px var(--red2));
+}
+.footer-copy {
+  color: var(--gray);
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+/* Hackathon Listings */
+.hackathon-filter-bar {
+  position: sticky;
+  top: 64px;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 4vw 1rem 4vw;
+  z-index: 10;
+  border-bottom: 2px solid var(--red2);
+}
+.hackathon-filter-bar input {
+  flex: 1;
+  background: var(--charcoal);
+  border: none;
+  outline: none;
+  color: var(--white);
+  font-size: 1.1rem;
+  padding: 0.7rem 1.2rem;
+  border-radius: 30px;
+  box-shadow: 0 0 8px var(--neon-red);
+  transition: box-shadow 0.2s;
+}
+.hackathon-filter-bar input:focus {
+  box-shadow: 0 0 16px var(--red2);
+}
+.hackathon-filter-bar button {
+  background: linear-gradient(90deg, var(--red), var(--red2));
+  border: none;
+  color: var(--white);
+  font-size: 1.3rem;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  box-shadow: 0 0 12px var(--neon-red);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.hackathon-filter-bar button:hover {
+  box-shadow: 0 0 24px var(--red2);
+  transform: scale(1.1);
+}
+
+.hackathon-listings {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  padding: 3rem 6vw 4rem 6vw;
+  background: var(--charcoal);
+  min-height: 60vh;
+}
+.hackathon-card {
+  background: var(--black);
+  border-radius: 24px;
+  box-shadow: 0 0 24px var(--neon-red);
+  border: 2px solid transparent;
+  transition: box-shadow 0.2s, border 0.2s, transform 0.2s;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.5rem 1.2rem;
+  position: relative;
+}
+.hackathon-card:hover {
+  border: 2px solid var(--red2);
+  box-shadow: 0 0 40px var(--red2), 0 0 12px var(--neon-red);
+  transform: scale(1.03);
+}
+.hackathon-logo img {
+  width: 70px;
+  height: 70px;
+  border-radius: 16px;
+  background: var(--charcoal);
+  box-shadow: 0 0 12px var(--neon-red);
+}
+.hackathon-info {
+  flex: 1;
+}
+.hackathon-info h3 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.3rem;
+  color: var(--white);
+  margin: 0 0 0.3rem 0;
+}
+.hackathon-info .college {
+  color: var(--red2);
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+.hackathon-info .date {
+  color: var(--gray);
+  font-size: 0.98rem;
+  margin-bottom: 0.2rem;
+}
+.hackathon-info .desc {
+  color: var(--gray);
+  font-size: 0.97rem;
+  margin-bottom: 0.7rem;
+}
+.register-btn {
+  margin-top: 0.2rem;
+  font-size: 1rem;
+  padding: 0.6rem 1.5rem;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.modal-overlay.active {
+  display: flex;
+}
+.modal {
+  background: var(--charcoal);
+  border-radius: 24px;
+  box-shadow: 0 0 32px var(--neon-red);
+  border: 2px solid var(--red2);
+  padding: 2.5rem 2rem 2rem 2rem;
+  min-width: 320px;
+  max-width: 95vw;
+  position: relative;
+  transform: scale(0.95);
+  opacity: 0;
+  transition: transform 0.3s, opacity 0.3s;
+}
+.modal.show {
+  transform: scale(1);
+  opacity: 1;
+}
+.modal-close {
+  position: absolute;
+  top: 1rem; right: 1rem;
+  background: none;
+  border: none;
+  color: var(--red2);
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.modal-close:hover {
+  color: var(--red);
+}
+.modal h2 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  color: var(--white);
+  margin-bottom: 1.2rem;
+}
+#registerForm input {
+  width: 100%;
+  background: var(--black);
+  border: none;
+  border-bottom: 2px solid var(--gray);
+  color: var(--white);
+  font-size: 1.1rem;
+  padding: 0.7rem 0.5rem;
+  margin-bottom: 1.1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+#registerForm input:focus {
+  border-bottom: 2px solid var(--red2);
+  box-shadow: 0 2px 12px var(--neon-red);
+}
+#registerForm .cta-btn {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+.modal-success {
+  display: none;
+  text-align: center;
+  color: var(--white);
+  animation: fade-in-up 0.7s;
+}
+.modal-success h3 {
+  color: #1ed760;
+  margin-bottom: 0.5rem;
+}
+
+/* Host Hackathon Page */
+.host-main {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--charcoal);
+  padding: 4rem 0;
+}
+.host-card {
+  background: var(--black);
+  border-radius: 28px;
+  box-shadow: 0 0 32px var(--neon-red);
+  border: 2px solid var(--red2);
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  min-width: 340px;
+  max-width: 95vw;
+  text-align: center;
+}
+.host-card h2 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  color: var(--white);
+  margin-bottom: 1.2rem;
+}
+#hostForm input, #hostForm textarea {
+  width: 100%;
+  background: var(--charcoal);
+  border: none;
+  border-bottom: 2px solid var(--gray);
+  color: var(--white);
+  font-size: 1.1rem;
+  padding: 0.7rem 0.5rem;
+  margin-bottom: 1.1rem;
+  outline: none;
+  border-radius: 8px 8px 0 0;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+#hostForm input:focus, #hostForm textarea:focus {
+  border-bottom: 2px solid var(--red2);
+  box-shadow: 0 2px 12px var(--neon-red);
+}
+#hostForm textarea {
+  min-height: 70px;
+  resize: vertical;
+}
+#hostForm .cta-btn {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+.host-success {
+  display: none;
+  text-align: center;
+  color: var(--white);
+  animation: fade-in-up 0.7s;
+}
+.host-success h3 {
+  color: #1ed760;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 700px) {
+  .hackathon-listings {
+    grid-template-columns: 1fr;
+    padding: 2rem 2vw;
+  }
+  .host-card {
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .scroll-block, .scroll-block.reverse {
+    flex-direction: column !important;
+    gap: 2rem;
+  }
+  .scroll-img {
+    width: 90vw;
+    height: 180px;
+  }
+}
+@media (max-width: 600px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .scroll-img {
+    height: 120px;
+  }
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.7rem 2vw;
+  }
+  .nav-links {
+    gap: 1rem;
+  }
+}

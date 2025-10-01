@@ -1,0 +1,9 @@
+<svg width="320" height="220" viewBox="0 0 320 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="320" height="220" rx="24" fill="#1A1A1A"/>
+<g>
+<rect x="30" y="60" width="80" height="100" rx="16" fill="#E50914"/>
+<rect x="120" y="40" width="80" height="140" rx="16" fill="#FF1E56"/>
+<rect x="210" y="80" width="80" height="80" rx="16" fill="#E50914"/>
+</g>
+<text x="50%" y="200" text-anchor="middle" fill="#fff" font-size="28" font-family="Montserrat,Arial" dy=".3em">Discover</text>
+</svg>

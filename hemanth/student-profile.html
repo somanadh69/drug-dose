@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Profile – Hackathon Hub</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/studentProfile.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="auth-bg">
+  <main class="profile-main">
+    <!-- Header -->
+    <section class="profile-header">
+      <div class="profile-pic">
+        <img id="profilePic" src="assets/profile-default.svg" alt="Profile Picture">
+      </div>
+      <div class="profile-info">
+        <h2 id="profileName">Student Name</h2>
+        <button class="logout-btn cta-btn" onclick="window.location.href='auth.html'">Logout</button>
+      </div>
+    </section>
+
+    <!-- Rating & Rank Card -->
+    <section class="profile-rating-card">
+      <div class="rating-info">
+        <div class="rating-label">Rating</div>
+        <div class="rating-value" id="profileRating">1520</div>
+      </div>
+      <div class="rank-info">
+        <div class="rank-label">Global Rank</div>
+        <div class="rank-value" id="profileRank">#128</div>
+      </div>
+      <div class="rating-graph">
+        <canvas id="ratingGraph" width="120" height="40"></canvas>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="profile-stats">
+      <div class="stat-card">
+        <div class="stat-label">Events Attended</div>
+        <div class="stat-value" id="eventsAttended">12</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Hackathons Won</div>
+        <div class="stat-value" id="hackathonsWon">3</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Projects Submitted</div>
+        <div class="stat-value" id="projectsSubmitted">7</div>
+      </div>
+    </section>
+
+    <!-- Solved Problems Section -->
+    <section class="profile-solved">
+      <h3>Solved Problems</h3>
+      <div class="solved-bars">
+        <div class="solved-bar">
+          <span>Easy</span>
+          <div class="progress-bar"><div class="progress" id="easyBar"></div></div>
+          <span id="easyCount">24</span>
+        </div>
+        <div class="solved-bar">
+          <span>Medium</span>
+          <div class="progress-bar"><div class="progress" id="mediumBar"></div></div>
+          <span id="mediumCount">15</span>
+        </div>
+        <div class="solved-bar">
+          <span>Hard</span>
+          <div class="progress-bar"><div class="progress" id="hardBar"></div></div>
+          <span id="hardCount">4</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Badges Section -->
+    <section class="profile-badges">
+      <h3>Badges</h3>
+      <div class="badges-grid" id="badgesGrid">
+        <!-- Badges injected by JS -->
+      </div>
+    </section>
+
+    <!-- Recent Activity Timeline -->
+    <section class="profile-activity">
+      <h3>Recent Activity</h3>
+      <ul class="activity-timeline" id="activityTimeline">
+        <!-- Activity injected by JS -->
+      </ul>
+    </section>
+  </main>
+  <script src="js/studentProfile.js"></script>
+</body>
+</html>

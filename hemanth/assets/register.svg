@@ -1,0 +1,10 @@
+<svg width="320" height="220" viewBox="0 0 320 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="320" height="220" rx="24" fill="#1A1A1A"/>
+<g>
+<rect x="60" y="80" width="200" height="60" rx="16" fill="#E50914"/>
+<rect x="100" y="100" width="120" height="20" rx="10" fill="#FF1E56"/>
+<circle cx="160" cy="110" r="18" fill="#fff"/>
+<text x="160" y="116" text-anchor="middle" fill="#E50914" font-size="18" font-family="Montserrat,Arial">Form</text>
+</g>
+<text x="50%" y="200" text-anchor="middle" fill="#fff" font-size="28" font-family="Montserrat,Arial" dy=".3em">Register</text>
+</svg>
