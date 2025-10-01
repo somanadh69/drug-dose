@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drug Information Search</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div class="main-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="https://symbols.getvecta.com/stencil_152/1_pill.3399070396.svg" alt="Tablet Pill Icon" style="width:60px;margin-bottom:25px;">
+                <h2>Drug Info</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="composition.html" class="nav-link" onclick="saveDrugName()">Composition</a>
+                <a href="dosage.html" class="nav-link" onclick="saveDrugName()">Dosage</a>
+                <a href="quality.html" class="nav-link" onclick="saveDrugName()">Quality & Effectiveness</a>
+                <a href="uses.html" class="nav-link" onclick="saveDrugName()">Uses & Side Effects</a>
+                <a href="manufacturer.html" class="nav-link" onclick="saveDrugName()">Manufacturer</a>
+            </nav>
+            <div class="sidebar-footer">
+                <span style="font-size:0.95rem;color:#b6c6e3;">Powered by <a href="https://open.fda.gov/apis/drug/label/" target="_blank" style="color:#60a5fa;">openFDA</a></span>
+            </div>
+        </aside>
+        <section class="main-content">
+            <div class="dark-toggle" id="darkToggle" title="Toggle dark mode">
+                <svg id="darkIcon" viewBox="0 0 24 24"><path d="M12 2a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1zm5.657 3.343a1 1 0 0 1 1.414 0l.707.707a1 1 0 1 1-1.414 1.414l-.707-.707a1 1 0 0 1 0-1.414zM21 11a1 1 0 1 1 0 2h-1a1 1 0 1 1 0-2h1zm-2.929 7.071a1 1 0 0 1 0-1.414l.707-.707a1 1 0 1 1 1.414 1.414l-.707.707a1 1 0 0 1-1.414 0zM12 20a1 1 0 0 1-1-1v-1a1 1 0 1 1 2 0v1a1 1 0 0 1-1 1zm-7.071-2.929a1 1 0 0 1 1.414 0l.707.707a1 1 0 1 1-1.414 1.414l-.707-.707a1 1 0 0 1 0-1.414zM4 13a1 1 0 1 1 0-2H3a1 1 0 1 1 0 2h1zm2.343-7.657a1 1 0 0 1 0 1.414l-.707.707A1 1 0 1 1 4.222 6.05l.707-.707a1 1 0 0 1 1.414 0zM12 6a6 6 0 1 1 0 12A6 6 0 0 1 12 6z"></path></svg>
+            </div>
+            <h1>Hospital Drug Info Portal</h1>
+            <p class="main-desc">Search for any medicine to get its composition, dosage, quality, uses, side effects, and manufacturer details. Fast, reliable, and up-to-date.</p>
+            <div class="search-card">
+                <p style="font-size:1.1rem;color:#64748b;">Welcome! Use the sidebar to explore drug information.</p>
+                <a href="buy.html" class="buy-main-btn" style="display:inline-block;margin-top:24px;padding:18px 38px;font-size:1.18rem;font-weight:700;background:linear-gradient(90deg,#2563eb 0%,#60a5fa 100%);color:#fff;border-radius:12px;text-decoration:none;box-shadow:0 2px 12px #e3eaff;transition:background 0.2s;">Buy Medicine Online</a>
+            </div>
+        </section>
+    </div>
+    <script>
+    function saveDrugName() {
+        var drug = document.getElementById('drugName').value.trim();
+        if (drug) {
+            localStorage.setItem('selectedDrug', drug);
+        }
+    }
+    </script>
+    <script src="assets/main.js"></script>
+</body>
+</html>

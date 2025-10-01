@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drug Dosage</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="dark-toggle" id="darkToggle" title="Toggle dark mode">
+            <svg id="darkIcon" viewBox="0 0 24 24"><path d="M12 2a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1zm5.657 3.343a1 1 0 0 1 1.414 0l.707.707a1 1 0 1 1-1.414 1.414l-.707-.707a1 1 0 0 1 0-1.414zM21 11a1 1 0 1 1 0 2h-1a1 1 0 1 1 0-2h1zm-2.929 7.071a1 1 0 0 1 0-1.414l.707-.707a1 1 0 1 1 1.414 1.414l-.707.707a1 1 0 0 1-1.414 0zM12 20a1 1 0 0 1-1-1v-1a1 1 0 1 1 2 0v1a1 1 0 0 1-1 1zm-7.071-2.929a1 1 0 0 1 1.414 0l.707.707a1 1 0 1 1-1.414 1.414l-.707-.707a1 1 0 0 1 0-1.414zM4 13a1 1 0 1 1 0-2H3a1 1 0 1 1 0 2h1zm2.343-7.657a1 1 0 0 1 0 1.414l-.707.707A1 1 0 1 1 4.222 6.05l.707-.707a1 1 0 0 1 1.414 0zM12 6a6 6 0 1 1 0 12A6 6 0 0 1 12 6z"></path></svg>
+        </div>
+        <h1>
+            <img src="https://cdn-icons-png.flaticon.com/512/2965/2965567.png" alt="Hospital Logo" style="width:38px;vertical-align:middle;margin-right:8px;filter:drop-shadow(0 2px 8px #e3eaff);">
+            Drug Dosage
+        </h1>
+        <p style="color:#64748b;margin-bottom:18px;font-size:1.08rem;">Get recommended dosage and administration details for your medicine.</p>
+        <input type="text" id="drugName" placeholder="Enter drug name (e.g. paracetamol)..." aria-label="Drug name">
+        <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            var stored = localStorage.getItem('selectedDrug');
+            if (stored) {
+                document.getElementById('drugName').value = stored;
+            }
+        });
+        </script>
+        <button onclick="showDosage()">Show Dosage</button>
+        <div id="dosageResult"></div>
+        <a href="index.html" class="nav-link"><button>Back to Home</button></a>
+    </div>
+    <script src="assets/main.js"></script>
+    <script src="assets/dosage.js"></script>
+</body>
+</html>
